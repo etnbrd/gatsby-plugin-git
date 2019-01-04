@@ -5,7 +5,7 @@
     "gatsby-plugin",
     "git"
   ],
-  "version": "0.0.1",
+  "version": "0.0.1-1",
   "description": "Gatsby plugin which checkout a repository e.g. to populate content",
   "main": "gatsby-node.js",
   "scripts": {
