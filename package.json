@@ -1,0 +1,17 @@
+{
+  "name": "gatsby-plugin-git",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "git"
+  ],
+  "version": "0.0.1",
+  "description": "Gatsby plugin which checkout a repository e.g. to populate content",
+  "main": "gatsby-node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/etnbrd/gatsby-plugin-git",
+  "author": "Etienne Brodu <etn@etnbrd.com> (https://etnbrd.com)",
+  "license": "MIT"
+}
