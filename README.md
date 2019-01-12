@@ -52,6 +52,21 @@ module.exports = {
 
 :warning: 
 This plugin will checkout the specified revision, discarding your current branch tip, even if the revision is the head of your current branch.
-It is specifically intended for deployment, to fetch a single revision of a repository (not the full history) and check it out.
+*It will result in a detached HEAD*.
+So you might not want to use this on your development environement, as you would have to constantly checkout back to your branch to commit new revisions.
 
-You might want to condition this plugin to run only on deployment, and manually put your repository in your local `content` folder, e.g. using submodules, or symbolic links.
+It is specifically intended for automated deployment, to fetch a single revision of a repository (not the full history) and check it out.
+So you might want to condition this plugin to run only on deployment.
+And for your development environement, you can manually put the repository in your local `content` folder, e.g. using submodules, or symbolic links.
+
+## Simplest example
+
+As an example, I forked `gatsby-starter-default` and added this plugin to fetch some random repo:
+https://github.com/etnbrd/gatsby-starter-default
+
+All the code needed to use the plugin can be found in this commit:
+https://github.com/etnbrd/gatsby-starter-default/commit/e263f16da23e3c887930ffdbed826296a07799d9
+(It doesn't include the condition for deployment only, though, as that would depend on your environements)
+
+It fetches the repo `toddmotto/public-apis`, and sources it with `gatsby-source-filesystem`.
+As a result, the file `README.md` should be available in your graph.
