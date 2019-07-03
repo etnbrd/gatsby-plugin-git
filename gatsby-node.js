@@ -18,9 +18,10 @@ const folderExists = async (path) => {
   if (ret === true)
     return true
 
-  if (ret.code === 'ENOENT')
-    await fs.mkdir(path)
+  if (ret.code === 'ENOENT') {
+    await fs.mkdirp(path)
     return check(path)
+  }
 
   return ret
 }
