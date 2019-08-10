@@ -17,7 +17,7 @@ or
 
 Hide a folder from your git revision history.
 
-```.gitignore
+```text:title=.gitignore
 /content
 ```
 
